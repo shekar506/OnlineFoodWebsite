@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Importing Roboto font -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images2.alphacoders.com/101/thumb-1920-1019901.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px); /* Adding blur to background */
+            background-color: #000; /* Fallback for background image */
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background */
+            padding: 30px;
+            text-align: center;
+            width: 300px; /* Adjusted width */
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #ffffff; /* White text for header */
+            font-family: 'Roboto', sans-serif; /* Using Roboto font */
+            font-size: 24px; /* Slightly reduced font size */
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            color: #d3d3d3; /* Light gray for labels */
+            display: block;
+            margin: 12px 0 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #8B0000; /* Vine Red border */
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8); /* Light translucent white */
+            font-size: 14px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: #000; /* Black border on focus */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect on focus */
+        }
+        .btn {
+            padding: 12px;
+            margin: 20px 0;
+            width: 100%;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50px;
+            background-color: rgba(139, 0, 0, 0.8); /* Translucent Vine Red */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+        }
+        .btn:hover {
+            background-color: rgba(165, 42, 42, 0.8); /* Darker Vine Red on hover */
+            transform: scale(1.05);
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            font-size: 12px; /* Adjusted font size */
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login</h1>
+
+        <form id="loginForm" action="Login">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordMessage" class="error-message"></div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Foodie Heaven. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const passwordInput = document.getElementById('password');
+        const passwordMessage = document.getElementById('passwordMessage');
+
+        form.addEventListener('submit', function(event) {
+            const password = passwordInput.value;
+
+            if (password.length < 8) {
+                event.preventDefault(); // Prevent form submission
+                passwordMessage.textContent = 'Password must be at least 8 characters long.';
+            } else {
+                passwordMessage.textContent = ''; // Clear the error message if valid
+            }
+        });
+    </script>
+
+</body>
+</html>

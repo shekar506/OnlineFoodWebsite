@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Password Mismatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Importing Roboto font -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images2.alphacoders.com/101/thumb-1920-1019901.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px); /* Adding blur to background */
+            background-color: #000; /* Fallback for background image */
+        }
+        .message-box {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background */
+            padding: 40px;
+            text-align: center;
+            width: 350px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .message-box:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #ffffff; /* White text for header */
+            font-family: 'Roboto', sans-serif; /* Using Roboto font */
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            color: #d3d3d3; /* Light gray for paragraph text */
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50px;
+            background-color: rgba(139, 0, 0, 0.8); /* Translucent Vine Red */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+            text-decoration: none; /* Remove underline from button */
+        }
+        .btn:hover {
+            background-color: rgba(165, 42, 42, 0.8); /* Darker Vine Red on hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-box">
+        <h1>Password Mismatch!</h1>
+        <p>Please enter the same password!</p>
+        <a href="ResetPassword.html"><button class="btn">Try Again</button></a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New User Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Importing Roboto font -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images2.alphacoders.com/101/thumb-1920-1019901.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Fallback for background image */
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background */
+            padding: 40px;
+            text-align: center;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px); /* Frosted glass effect */
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.03);
+        }
+        h1 {
+            color: #ffffff; /* White text for header */
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            color: #d3d3d3; /* Light gray for paragraph text */
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn-register {
+            padding: 16px;
+            margin: 20px 0;
+            width: 100%;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            background-color: rgba(139, 0, 0, 0.8); /* Translucent Vine Red */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-register:hover {
+            background-color: rgba(165, 42, 42, 0.8); /* Darker Vine Red on hover */
+            transform: scale(1.05);
+        }
+        .subtext {
+            font-size: 14px;
+            color: #8B0000; /* Vine Red */
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, New User!</h1>
+        <p>It looks like you're new here. Register now to continue.</p>
+        <!-- "Register" button linking to Register.html -->
+        <a href="Register.html" class="btn-register">Register Now</a>
+        <p class="subtext">Don't miss out on the latest offers!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Foodie Heaven. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
